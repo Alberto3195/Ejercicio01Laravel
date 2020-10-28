@@ -14,8 +14,10 @@ class CreateModelosTable extends Migration
     public function up()
     {
         Schema::create('modelos', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->string('Modelo');
+            $table->string('Tipo');
+            $table->integer('Nº Puertas');
+            $table->string('Año de producción');
         });
     }
 
