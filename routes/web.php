@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\audiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('vistaInicial');
 });
+
+// Route::get('/pagina02', function () {
+//     return view('pagina02');
+// });
+
+// Route::get('pagina02', 'audiContoller@devuelveModelos');
+
+Route::get('pagina02', [audiController::class, 'devuelveModelos']);

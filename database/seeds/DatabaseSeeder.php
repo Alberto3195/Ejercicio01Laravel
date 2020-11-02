@@ -12,8 +12,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        App\modelos::truncate();
-        DB::unprepared(file_get_contents('dabatabase/modelos.sql'));
-        //falta por crear el sql de los modelos
+        App\modelos::truncate(); //Indicamos la tabla a la que deseamos acceder
+        DB::unprepared(file_get_contents('dabatabase/audi.sql')); //llamamos a nuestra base de datos
+        //SqL creado
     }
 }
